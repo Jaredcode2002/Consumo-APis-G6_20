@@ -12,20 +12,20 @@ function CargarPasajeros(){
         success: function(reponse){
             var MiItems = reponse;
             var Valores = "";
-
-           for(i=0; i<MisItems.length; i++)
-            Valores+=  `<tr>` + 
-            '<td>' + MiItems[i].CodigoPasajero +`</td>`+
-            '<td>' + MiItems[i].Nombres +`</td>`+
-            '<td>' + MiItems[i].Apellidos +`</td>`+
-            '<td>' + MiItems[i].FechaDeRegistro +`</td>`+
-            '<td>' + MiItems[i].Nacionalidad +`</td>`+
-            '<td>' + MiItems[i].NumeroTelefonico +`</td>`+
-            '<td>' + MiItems[i].Email +`</td>`+
-            '<tr>' 
+            
+            for(i=0; i< MiItems.length; i++){
+            Valores+=  '<tr>' + 
+            '<td>' + MiItems[i].CodigoPasajero +'</td>'+
+            '<td>' + MiItems[i].Nombres +'</td>'+
+            '<td>' + MiItems[i].Apellidos +'</td>'+
+            '<td>' + MiItems[i].FechaDeRegistro +'</td>'+
+            '<td>' + MiItems[i].Nacionalidad +'</td>'+
+            '<td>' + MiItems[i].NumeroTelefonico +'</td>'+
+            '<td>' + MiItems[i].Email +'</td>'+
+            '</tr>' 
 
             $('#DataPasajeros').html(Valores);
         }
-
+    }
     });
 }
