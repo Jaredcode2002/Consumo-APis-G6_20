@@ -11,9 +11,6 @@
 </head>
 <body>
     <style>
-        #insertZone{
-            visibility: hidden;
-        }
         .formulario{
             border-radius: 2%;;
             padding:10px;
@@ -49,9 +46,7 @@
         </div>
     </div>
 
-    <div class="col-sm-4">
-        <input type="button" value="Insertar" id="insert" >
-    </div><br><br>
+    <br><br>
     
     <div id="insertZone">
         <div class="formulario">
@@ -84,8 +79,8 @@
                         <div class="col-sm-3" style="margin-right: 10px;"> <br>
                             <label for="">Distancia</label> <input type="text" id="distancia" class="form-control" placeholder="Ingrese la distancia del vuelo">
                         </div>
-                        <div class="col-sm-2" style="margin-right: 10px;"> <br><br>
-                            <input type="submit" value="Agregar vuelo" id="btnAgg" onclick="aggVuelo()">
+                        <div class="col-sm-2" style="margin-right: 10px;" id="btnAgregar"> <br><br>
+                            <input type="submit" value="Agregar vuelo" id="btnAgg" class="btn btn-warning" onclick="aggVuelo()">
                         </div>
                     </form>
                 </div>
