@@ -51,7 +51,7 @@ function aggVuelo() {
         datatype: 'JSON',
         contenttype: 'application/json',
         success: function (reponse) {
-            console.log(response)
+            console.log(reponse)
             alert("Vuelo agregado con exito")
         },
         error: function(textStatus, errorThrow){
