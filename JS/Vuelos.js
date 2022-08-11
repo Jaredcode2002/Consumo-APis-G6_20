@@ -1,7 +1,8 @@
 var urlVuelos = 'http://20.216.41.245:90/G6_20/Vuelos/controller/vuelo.php?op=Vuelos';
+var urlInsrtVuelos = 'http://20.216.41.245:90/G6_20/Vuelos/controller/vuelo.php?op=InsertVuelo'
 
 $(document).ready(function(){
-   CargarVuelos();
+   CargarVuelos()
 });
 
 function CargarVuelos(){
@@ -29,3 +30,45 @@ function CargarVuelos(){
        }
     });
 }
+
+function aggVuelo() {
+    let datosvuelo = {
+        id: $('#codVuelo').val(),
+        origen: $('#c_Origen').val(),
+        destino: $('#c_Destino').val(),
+        fechaVuelo: $('#fecha').val(),
+        cantidadPasajeros: $('#c_Pasajeros').val(),
+        tipoAvion: $('#t_Avion').val(),
+        distancia: $('#distancia').val()
+    }
+
+    let datosvueloJson = JSON.stringify(datosvuelo)
+    alert(datosvueloJson);
+    $.ajax({
+        url: urlInsrtVuelos,
+        type:'POST',
+        data: datosvueloJson,
+        datatype: 'JSON',
+        contenttype: 'application/json',
+        success: function (reponse) {
+            console.log(response)
+            alert("Vuelo agregado con exito")
+        },
+        error: function(textStatus, errorThrow){
+            alert("Error al agregar el vuelo "+textStatus+errorThrow)
+        }
+    })
+alert("aaaa")
+}
+
+//Mostrar o no el formulario de insertar
+var mostrarI = false
+const mostrarInsert = document.getElementById("insert").addEventListener("click",() => {
+    if (mostrarI ==false) {
+        document.getElementById("insertZone").style.visibility = "visible"
+        mostrarI=true
+    } else {
+        document.getElementById("insertZone").style.visibility = "hidden"
+        mostrarI=false
+    }
+})
