@@ -47,18 +47,18 @@ function aggVuelo() {
     $.ajax({
         url: urlInsrtVuelos,
         type:'POST',
-        data: datosvueloJson,
+      data: datosvueloJson,
         datatype: 'JSON',
         contenttype: 'application/json',
-        success: function (reponse) {
+        success: function (response) {
             console.log(response)
             alert("Vuelo agregado con exito")
         },
-        error: function(textStatus, errorThrow){
-            alert("Error al agregar el vuelo "+textStatus+errorThrow)
+        error: function(textStatus, errorThrown){
+            alert("Error al agregar el vuelo "+textStatus+errorThrown)
         }
     })
-alert("aaaa")
+alert("Aviso: ")
 }
 
 //Mostrar o no el formulario de insertar
