@@ -5,12 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva</title>
+    <link rel="stylesheet" href="../estilos/estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../JS/Reserva.js"></script>6
+    <script src="../JS/Reserva.js"></script>
 </head>
 
 <body>
+    <div id="particles-js"></div>  
+    <nav class="navbar navbar-expand-lg  bg-light">
+        <h1><a class="navbar-brand" href="Home.html">Agencia de Vuelos</a></h1>
+       
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="Avion.html">Avion</a>
+          <a class="nav-item nav-link" href="Pasajero.html">Pasajero</a>
+          <a class="nav-item nav-link" href="Reserva.html">Reserva</a>
+          <a class="nav-item nav-link" href="Vuelo.html">Vuelo</a>
+          <a class="nav-item nav-link" href="../Informacion.html">Informacion</a>
+        </div>
+      </div>
+    </nav>
+    
     <div class="container">
         <div class="consulta mt-4">
             <div class="row">
@@ -19,6 +35,25 @@
                         Lista Reserva de Vuelo
                     </h3>
                 </div>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="table table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Numero De Reservacion</th>
+                            <th>Codigo de Vuelo</th>
+                            <th>Codigo De Pasajero</th>
+                            <th>Nombre Pasajero</th>
+                            <th>Nombre Destino</th>
+                            <th>Fecha De Vuelo</th>
+                            <th>Precio Vuelo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="DataReserva">
+                    </tbody>
+                </table>
             </div>
         </div>
         <div class="Formulario">
@@ -52,26 +87,9 @@
                 </div>
             </div>
         </div>
-        <div class="box-body">
-            <div class="table table-responsive">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Numero De Reservacion</th>
-                            <th>Codigo de Vuelo</th>
-                            <th>Codigo De Pasajero</th>
-                            <th>Nombre Pasajero</th>
-                            <th>Nombre Destino</th>
-                            <th>Fecha De Vuelo</th>
-                            <th>Precio Vuelo</th>
-                        </tr>
-                    </thead>
-                    <tbody id="DataReserva">
-                    </tbody>
-                </table>
-            </div>
-        </div>
     </div>
+    <script src="../estilos/particles.min.js"></script>
+    <script src="../estilos/app.js"></script>
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>

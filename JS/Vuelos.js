@@ -101,7 +101,7 @@ alert("Aviso: ")
 
 function ActualizarVuelo(id){
     let datosvuelo ={
-        id: $('#codVuelo').val(),
+        id: id,
         origen: $('#c_Origen').val(),
         destino: $('#c_Destino').val(),
         fechaVuelo: $('#fecha').val(),
@@ -125,6 +125,7 @@ function ActualizarVuelo(id){
          alert('Error al Actualizar el vuelo'+ textStatus + errorThrown);
      }
     });
+    alert("Aviso")
  }
 
  function EliminarVuelo(codigo){

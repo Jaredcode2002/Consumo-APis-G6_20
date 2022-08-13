@@ -117,7 +117,7 @@ function AgregarPasajero(){
             alert('Error al agregar el pasajero'+textStatus+errorThrown);
         }
     });
-alert('Mmmm');
+alert('Aviso:');
 }
 
 function ActualizarPasajero(CodigoPasajero){
@@ -147,5 +147,5 @@ function ActualizarPasajero(CodigoPasajero){
         alert('Error al Actualizar el pasajero'+ textStatus + errorThrown);
     }
    });
-alert('Mmmm');
+alert('Aviso:');
 }
